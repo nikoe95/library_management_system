@@ -2,6 +2,7 @@
 #include "book.hpp"
 #include "library.hpp"
 #include "library_manager.hpp"
+#include "reader_card.hpp"
 
 int main()
 {
@@ -14,7 +15,7 @@ int main()
     library->rent_book("Harry Potter", "Dawid Nowak", "1313");
     library->rent_book("Harry Potter", "Dawid Cioch", "1414");
 
-}
 
-// Pomysly 
-// Dodac klase, która będzie reprezentowala karte uzytkownika (mozna stworzyc rozne karty, pocwiczy sie dziedziczenie)
+    ReaderCard user_card("Dawid Nowak", Card::CardType::DIRECTOR);
+    user_card.read_card_data();
+}
